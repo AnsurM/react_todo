@@ -16,10 +16,10 @@ export default function TodoForm({ addTodo }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="todo-form" onSubmit={handleSubmit}>
       <input
         type="text"
-        className="input"
+        className="todo-input"
         value={value}
         ref={inputRef}
         placeholder="Add Todo..."

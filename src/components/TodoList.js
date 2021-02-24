@@ -39,7 +39,11 @@ export default function TodoList() {
   };
 
   return (
-    <div className="app">
+    <div className="todo-app">
+      <div className="heading">
+        <h1>What's the Plan for Today?</h1>
+      </div>
+      <TodoForm addTodo={addTodo} />
       <div className="todo-list">
         {todos.map((todo, index) => (
           <Todo
@@ -50,7 +54,6 @@ export default function TodoList() {
             deleteTodo={deleteTodo}
           />
         ))}
-        <TodoForm addTodo={addTodo} />
       </div>
     </div>
   );
