@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 export default function Todo({ todo, index, toggleTodo, deleteTodo }) {
   return (
     <div
@@ -14,9 +18,8 @@ export default function Todo({ todo, index, toggleTodo, deleteTodo }) {
         {/* <button disabled={todo.isCompleted} onClick={() => completeTodo(index)}>
           Complete
         </button> */}
-        {/* <button onClick={() => deleteTodo(index)}>Delete</button> */}
-        <button className="btn btn-primary" onClick={() => deleteTodo(index)}>
-          Delete
+        <button className="btn btn-light" onClick={() => deleteTodo(index)}>
+          <FontAwesomeIcon icon={faTrash} size={"lg"} color="red" />
         </button>
       </div>
     </div>
